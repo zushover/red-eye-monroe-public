@@ -1,0 +1,36 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+/config.json
+/config.live.json
+/wallet.local.json
+/.secrets/
+**/*dpapi*
+*.pem
+*.key
+*.p12
+*.pfx
+*.signed.json
+*.local.json
+
+# Runtime and account data: no exceptions for research output
+/data/
+*.log
+
+# Dependencies and build output
+/bin/
+/.tools/
+/execution-sdk/node_modules/
+/node_modules/
+/dist/
+/coverage/
+*.exe
+*.dll
+
+# Editor and assistant-local state
+/.claude/
+/.codex/
+/.vscode/
+.DS_Store
+Thumbs.db

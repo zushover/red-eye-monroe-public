@@ -1,0 +1,1 @@
+{"name":"weatherbot-wallet","version":"0.2.0","private":true,"type":"module","dependencies":{"@polymarket/client":"0.10.0","viem":"2.56.5"},"scripts":{"doctor":"node doctor.mjs","test":"node --test executor.test.mjs"}}

@@ -1,0 +1,12 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {resolve} from 'node:path';
+const dir=resolve(import.meta.dirname,'data/backtest/city-model-research');
+const r=JSON.parse(await readFile(resolve(dir,'report.json'),'utf8'));
+const history=JSON.parse(await readFile(resolve(dir,'expanded-history-v2.json'),'utf8'));
+const gaps=JSON.parse(await readFile(resolve(dir,'inventory-gaps.json'),'utf8'));
+const fmt=x=>Number.isFinite(x)?x.toFixed(3):'—';
+let text=`# 城市独立模型离线研究\n\n生成时间：${r.generated_at}\n\n研究范围${r.coverage.universe}站，完成拟合${r.coverage.trained}站，通过研究门槛${r.coverage.passed}站，缺少足量配对数据${r.coverage.missing}站。比较${r.candidate_count}个候选配置，未替换线上模型。\n\n| 城市/站 | 状态 | 训练/留出天数 | 基准MAE°C | 新MAE°C | 已有城市模型MAE°C | 新整数°C档Log loss |\n|---|---|---:|---:|---:|---:|---:|\n`;
+for(const s of r.stations)text+=`| ${s.name} / ${s.icao} | ${s.status} | ${s.train_n||0}/${s.holdout_n||0} | ${fmt(s.baseline?.mae_c)} | ${fmt(s.holdout?.mae_c)} | ${fmt(s.existing_city_holdout?.mae_c)} | ${fmt(s.holdout?.integer_c_log_loss)} |\n`;
+text+='\n## 数据缺口\n\n';for(const s of gaps)text+=`- ${s.icao}：${s.reason}\n`;for(const s of history.failures||[])text+=`- ${s.icao}：${s.reason}\n`;
+text+='\n## 解释与限制\n\n通过仅代表相对基准的最高温/概率诊断改善，不能证明优于已有城市模型，也不代表实盘批准或盈利。候选模型包含信源子集偏差修正、标准化岭回归、季节项、正态/分歧缩放/残差核分布。训练与选型按日期划分，最终30%不参与本轮选型。\n\n历史数据是逐有效时刻滚动24小时提前量，不能冒充固定凌晨、早晨或升温阶段的预测版本。当前报告没有完成三个阶段的独立训练验证；需要历史逐小时预报版本及观测。METAR日高并不保证等于结算终值。整数摄氏度概率只是数学诊断，实际F档必须按市场原始边界另行验证。没有盘口成交收益验证。重复利用同一留出集有研究过拟合风险。\n';
+await writeFile(resolve(dir,'summary.md'),text);console.log('Saved summary.md');

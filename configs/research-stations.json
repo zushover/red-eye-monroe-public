@@ -1,0 +1,14 @@
+[
+ {"icao":"KLGA","name":"纽约 LaGuardia","latitude":40.77945,"longitude":-73.88027,"timezone":"America/New_York"},
+ {"icao":"RKPK","name":"釜山 Gimhae","latitude":35.179,"longitude":128.938,"timezone":"Asia/Seoul"},
+ {"icao":"VHHH","name":"香港国际机场","latitude":22.309,"longitude":113.922,"timezone":"Asia/Hong_Kong"},
+ {"icao":"WSSS","name":"新加坡 Changi","latitude":1.368,"longitude":103.982,"timezone":"Asia/Singapore"},
+ {"icao":"RJTT","name":"东京 Haneda","latitude":35.553,"longitude":139.781,"timezone":"Asia/Tokyo"},
+ {"icao":"EGLL","name":"伦敦 Heathrow","latitude":51.477,"longitude":-0.461,"timezone":"Europe/London"},
+ {"icao":"LFPG","name":"巴黎 Charles de Gaulle","latitude":49.015,"longitude":2.534,"timezone":"Europe/Paris"},
+ {"icao":"EDDF","name":"法兰克福国际机场","latitude":50.045,"longitude":8.598,"timezone":"Europe/Berlin"},
+ {"icao":"CYYZ","name":"多伦多 Pearson","latitude":43.679,"longitude":-79.629,"timezone":"America/Toronto"},
+ {"icao":"OMDB","name":"迪拜国际机场","latitude":25.254,"longitude":55.366,"timezone":"Asia/Dubai"},
+ {"icao":"SBGR","name":"圣保罗 Guarulhos","latitude":-23.432,"longitude":-46.469,"timezone":"America/Sao_Paulo"},
+ {"icao":"YSSY","name":"悉尼国际机场","latitude":-33.946,"longitude":151.173,"timezone":"Australia/Sydney"}
+]

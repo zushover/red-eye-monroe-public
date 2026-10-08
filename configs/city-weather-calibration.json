@@ -1,0 +1,126 @@
+{
+  "version": "city-model-selection-v3-lead24-2024-2025-china",
+  "lead_hours": 24,
+  "stations": {
+    "KMIA": {
+      "samples": 538, "holdout_samples": 162, "sigma_c": 0.91427,
+      "model": "ALL_EQUAL_BIAS", "validated": true,
+      "holdout_mae_c": 0.72881, "baseline_mae_c": 0.91019,
+      "holdout_log_loss": 1.41540, "baseline_log_loss": 1.70324,
+      "source_bias_c": {"ECMWF IFS 0.25°": 1.4, "NCEP GFS seamless": 0.2, "Open-Meteo best match": 0.2},
+      "source_weight": {"ECMWF IFS 0.25°": 0.333333, "NCEP GFS seamless": 0.333333, "Open-Meteo best match": 0.333333}
+    },
+    "KAUS": {
+      "samples": 538, "holdout_samples": 162, "sigma_c": 1.43318,
+      "model": "ALL_EQUAL_BIAS", "validated": true,
+      "holdout_mae_c": 1.06152, "baseline_mae_c": 1.17006,
+      "holdout_log_loss": 1.83318, "baseline_log_loss": 1.91052,
+      "source_bias_c": {"ECMWF IFS 0.25°": 0.6, "NCEP GFS seamless": 0.7, "Open-Meteo best match": 0.7},
+      "source_weight": {"ECMWF IFS 0.25°": 0.333333, "NCEP GFS seamless": 0.333333, "Open-Meteo best match": 0.333333}
+    },
+    "KATL": {
+      "samples": 538, "holdout_samples": 162, "sigma_c": 1.50927,
+      "model": "ECMWF_GFS_ERROR_WEIGHTED", "validated": true,
+      "holdout_mae_c": 1.15197, "baseline_mae_c": 1.20278,
+      "holdout_log_loss": 1.82544, "baseline_log_loss": 1.89019,
+      "source_bias_c": {"ECMWF IFS 0.25°": 1.6, "NCEP GFS seamless": 0.7},
+      "source_weight": {"ECMWF IFS 0.25°": 0.580033, "NCEP GFS seamless": 0.419967}
+    },
+    "KDAL": {
+      "samples": 538, "holdout_samples": 162, "sigma_c": 1.58144,
+      "model": "ALL_EQUAL_BIAS", "validated": true,
+      "holdout_mae_c": 1.37449, "baseline_mae_c": 1.52747,
+      "holdout_log_loss": 2.06075, "baseline_log_loss": 2.16457,
+      "source_bias_c": {"ECMWF IFS 0.25°": 0.8, "NCEP GFS seamless": 2.35, "Open-Meteo best match": 2.35},
+      "source_weight": {"ECMWF IFS 0.25°": 0.333333, "NCEP GFS seamless": 0.333333, "Open-Meteo best match": 0.333333}
+    },
+    "EDDM": {
+      "samples": 527, "holdout_samples": 159, "sigma_c": 1.26021,
+      "model": "BEST_MATCH_ONLY_BIAS", "validated": true,
+      "holdout_mae_c": 0.84371, "baseline_mae_c": 1.65535,
+      "holdout_log_loss": 1.57779, "baseline_log_loss": 2.20542,
+      "source_bias_c": {"Open-Meteo best match": 0.65},
+      "source_weight": {"Open-Meteo best match": 1.0}
+    },
+    "LTAC": {
+      "samples": 526, "holdout_samples": 158, "sigma_c": 1.00075,
+      "model": "ECMWF_BEST_EQUAL_BIAS", "validated": true,
+      "holdout_mae_c": 0.77057, "baseline_mae_c": 1.06614,
+      "holdout_log_loss": 1.40251, "baseline_log_loss": 1.76661,
+      "source_bias_c": {"ECMWF IFS 0.25°": 0.7, "Open-Meteo best match": 0.9},
+      "source_weight": {"ECMWF IFS 0.25°": 0.5, "Open-Meteo best match": 0.5}
+    },
+    "EHAM": {
+      "samples": 526, "holdout_samples": 158, "sigma_c": 0.95523,
+      "model": "ECMWF_BEST_ERROR_WEIGHTED", "validated": true,
+      "holdout_mae_c": 0.79484, "baseline_mae_c": 0.97975,
+      "holdout_log_loss": 1.45215, "baseline_log_loss": 1.72338,
+      "source_bias_c": {"ECMWF IFS 0.25°": 0.7, "Open-Meteo best match": -0.1},
+      "source_weight": {"ECMWF IFS 0.25°": 0.728075, "Open-Meteo best match": 0.271925}
+    },
+    "WSSS": {
+      "samples": 529, "holdout_samples": 159, "sigma_c": 1.00076,
+      "model": "ECMWF_GFS_EQUAL_BIAS", "validated": true,
+      "holdout_mae_c": 0.79308, "baseline_mae_c": 1.22264,
+      "holdout_log_loss": 1.45391, "baseline_log_loss": 1.91208,
+      "source_bias_c": {"ECMWF IFS 0.25°": 1.9, "NCEP GFS seamless": 0.7},
+      "source_weight": {"ECMWF IFS 0.25°": 0.5, "NCEP GFS seamless": 0.5}
+    },
+    "ZBAA": {
+      "samples": 529, "holdout_samples": 159, "sigma_c": 1.32403,
+      "model": "ECMWF_BEST_ERROR_WEIGHTED", "validated": true,
+      "holdout_mae_c": 1.00232, "baseline_mae_c": 1.39371,
+      "holdout_log_loss": 1.69154, "baseline_log_loss": 1.95829,
+      "source_bias_c": {"ECMWF IFS 0.25°": 1.1, "Open-Meteo best match": 0.9},
+      "source_weight": {"ECMWF IFS 0.25°": 0.419945, "Open-Meteo best match": 0.580055}
+    },
+    "ZSPD": {
+      "samples": 529, "holdout_samples": 159, "sigma_c": 1.11195,
+      "model": "GFS_BEST_EQUAL_BIAS", "validated": true,
+      "holdout_mae_c": 1.17610, "baseline_mae_c": 1.55943,
+      "holdout_log_loss": 1.93869, "baseline_log_loss": 2.30881,
+      "source_bias_c": {"NCEP GFS seamless": 1.2, "Open-Meteo best match": 1.3},
+      "source_weight": {"NCEP GFS seamless": 0.5, "Open-Meteo best match": 0.5}
+    },
+    "ZUUU": {
+      "samples": 524, "holdout_samples": 158, "sigma_c": 1.81061,
+      "model": "ECMWF_BEST_ERROR_WEIGHTED", "validated": true,
+      "holdout_mae_c": 1.44844, "baseline_mae_c": 1.83829,
+      "holdout_log_loss": 1.98578, "baseline_log_loss": 2.28412,
+      "source_bias_c": {"ECMWF IFS 0.25°": 0.7, "Open-Meteo best match": 0.55},
+      "source_weight": {"ECMWF IFS 0.25°": 0.458093, "Open-Meteo best match": 0.541907}
+    },
+    "ZHHH": {
+      "samples": 524, "holdout_samples": 158, "sigma_c": 1.18608,
+      "model": "BEST_MATCH_ONLY_BIAS", "validated": true,
+      "holdout_mae_c": 1.00823, "baseline_mae_c": 1.18797,
+      "holdout_log_loss": 1.67382, "baseline_log_loss": 1.82728,
+      "source_bias_c": {"Open-Meteo best match": 0.5},
+      "source_weight": {"Open-Meteo best match": 1.0}
+    },
+    "ZGGG": {
+      "samples": 529, "holdout_samples": 159, "sigma_c": 1.18608,
+      "model": "BEST_MATCH_ONLY_BIAS", "validated": true,
+      "holdout_mae_c": 1.38742, "baseline_mae_c": 1.70535,
+      "holdout_log_loss": 2.16549, "baseline_log_loss": 2.18567,
+      "source_bias_c": {"Open-Meteo best match": 1.3},
+      "source_weight": {"Open-Meteo best match": 1.0}
+    },
+    "ZGSZ": {
+      "samples": 525, "holdout_samples": 158, "sigma_c": 1.11195,
+      "model": "ECMWF_GFS_EQUAL_BIAS", "validated": true,
+      "holdout_mae_c": 0.88734, "baseline_mae_c": 0.91139,
+      "holdout_log_loss": 1.54976, "baseline_log_loss": 1.56869,
+      "source_bias_c": {"ECMWF IFS 0.25°": 1.1, "NCEP GFS seamless": -1.5},
+      "source_weight": {"ECMWF IFS 0.25°": 0.5, "NCEP GFS seamless": 0.5}
+    },
+    "VHHH": {
+      "samples": 529, "holdout_samples": 159, "sigma_c": 1.43603,
+      "model": "GFS_BEST_ERROR_WEIGHTED", "validated": true,
+      "holdout_mae_c": 1.30893, "baseline_mae_c": 2.93899,
+      "holdout_log_loss": 1.90916, "baseline_log_loss": 3.19483,
+      "source_bias_c": {"NCEP GFS seamless": 3.3, "Open-Meteo best match": 0.3},
+      "source_weight": {"NCEP GFS seamless": 0.371730, "Open-Meteo best match": 0.628270}
+    }
+  }
+}
