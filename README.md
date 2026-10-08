@@ -1,5 +1,7 @@
 # Red Eye Monroe
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 A local weather-market research platform combining station observations, forecast models, Polymarket order books, probability diagnostics, and portfolio monitoring.
 
 Built with Go, JavaScript, and PowerShell. The dashboard brings together a global city view, market matrices, research opportunities, simulated portfolios, and an optional live-execution interface.
